@@ -1,0 +1,8 @@
+from cryptography.fermet import Fernet
+key=Fernet.generate_key()
+print(key)
+f=Fernet(key)
+cipher=f.encrypt(b"my file is stored to be secret")
+print(cipher)
+msg=f.decrypt(cipher)
+print(msg)
